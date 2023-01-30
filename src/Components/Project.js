@@ -5,15 +5,24 @@ import Swal from "sweetalert2";
 import Fade from "react-reveal/Fade";
 
 function Project() {
-  const handleViewDemoButton = () => {
-    Swal.fire({
-      title: "<strong>OOPS </strong>",
-      icon: "info",
-      html: "This site is still under development ",
-      showCloseButton: true,
-      showCancelButton: true,
-      focusConfirm: false,
-    });
+  const handleViewDemoButton = (id,source) => {
+    if(id==1)
+    {
+      <a href={source}/>
+
+    
+    }
+    else{
+      Swal.fire({
+        title: "<strong>OOPS </strong>",
+        icon: "info",
+        html: "This site is still under development ",
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+      });
+    }
+   
   };
 
   return (
@@ -32,7 +41,7 @@ function Project() {
             {ProjectCardData.map((data) => (
               <div className="   h-[500px] w-96 md:w-[420px]  lg:w-[410px]  p-8  box bg-background shadow-xl shadow-slate-400 p-4 m-4 hover:bg-slate-50  transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-slate-200 duration-400 sm:w-50 ">
                 <img
-                  className="h-0 w-0  sm:h-24 sm:w-24    "
+                  className="h-0 w-0  sm:h-24 sm:w-full  shadow-lg    "
                   src={data.image}
                 />
 
@@ -52,9 +61,11 @@ function Project() {
                       View Code
                     </button>
                   </a>
+
+                  
                   <button
                     className="text-black font-bold border rounded p-1 m-1 px-2 justify-end bg-blue-700"
-                    onClick={() => handleViewDemoButton()}
+                    onClick={() => handleViewDemoButton(data.id,data.source)}
                   >
                     Live Demo
                   </button>

@@ -77,9 +77,10 @@ export  const TechUsed = [
       },{
         name: "ADOBE-XD",
         image: xd,
-      },{
-        name:"POSTMAN",
-        // image: ,
-
       }
+      // ,{
+      //   name:"POSTMAN",
+      //   // image: ,
+
+      // }
   ];

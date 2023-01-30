@@ -33,6 +33,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'background': "url('../src/Assets/background.jpg')",
+        'background2':"url('../src/Assets/bg.jpg ') ",
        },
       colors: {
         primary: "#00040f",

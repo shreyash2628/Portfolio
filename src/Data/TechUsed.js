@@ -9,6 +9,10 @@ import mysql from '../Assets/icons/mysql.png'
 import android from '../Assets/icons/android.png'
 import java from '../Assets/icons/java.png'
 import mui from '../Assets/icons/mui.png'
+import xd from '../Assets/icons/xd.png'
+import figma from '../Assets/icons/figma.png'
+
+
 
 
 
@@ -19,7 +23,7 @@ import firebase from '../Assets/icons/firebase.png'
 
 export  const TechUsed = [
     {
-      name: "FIGMA ADOBE XD",
+      name: "HTML",
       image: html,
     },
     {
@@ -66,5 +70,16 @@ export  const TechUsed = [
     {
         name: "ANDROID-DEV",
         image: android,
+      },
+      {
+        name: "FIGMA",
+        image: figma,
+      },{
+        name: "ADOBE-XD",
+        image: xd,
+      },{
+        name:"POSTMAN",
+        // image: ,
+
       }
   ];

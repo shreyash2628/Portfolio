@@ -8,10 +8,10 @@ import grad from '../Assets/icons/graduation.png'
 
 function Education() {
   return (
-    <div>
+    <div className="sm:pl-12">
     {/* <div className="bg-background w-full h-96 p-24"> */}
 
-      <div className='p-24 h-full  w-full'>
+      <div className='p-12  px-2 h-full w-screen sm:px-8 sm:p-0'>
 
           <div className="flex flex-col">
             

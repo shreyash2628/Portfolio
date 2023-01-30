@@ -1,91 +1,69 @@
 import React from "react";
 import TechIcon from "../Assets/icons/manager.png";
-import robo from "../Assets/robot.png";
 import { ProjectCardData } from "../Data/ProjectCardData";
-import Swal from 'sweetalert2'
-
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-} from "@material-tailwind/react";
+import Swal from "sweetalert2";
+import Fade from "react-reveal/Fade";
 
 function Project() {
-
-    const handleViewDemoButton = () =>
-    {
-        Swal.fire({
-            title: '<strong>OOPS </strong>',
-            icon: 'info',
-            html:
-              'This site is still under development ' ,
-            showCloseButton: true,
-            showCancelButton: true,
-            focusConfirm: false,
-            
-          })
-    }
-
-
+  const handleViewDemoButton = () => {
+    Swal.fire({
+      title: "<strong>OOPS </strong>",
+      icon: "info",
+      html: "This site is still under development ",
+      showCloseButton: true,
+      showCancelButton: true,
+      focusConfirm: false,
+    });
+  };
 
   return (
-    <div className="p-24  h-auto  ">
-      <div className="flex flex-row justify-start">
+    <div id="ProjectSection" className="p-12 sm:pl-12 h-auto w-fit  ">
+      <div className="flex flex-row justify-start ">
         <img src={TechIcon} className="h-16 mx-4 " />
         <h1 className="text-white justify-center text-6xl  ">My Projects</h1>
       </div>
 
       {/* //card */}
 
-     
+      {/* card2 */}
+      <div className="p-1 mt-4 pt-8 h-fit  w-[900px]  md:w-[1200px] lg:w-[1400px] ">
+        <Fade left cascade>
+          <div className=" grid grid-cols-2 gap-8 lg:grid lg:grid-cols-3 lg:gap-8 md:grid md:grid-cols-3 md:gap-2 ">
+            {ProjectCardData.map((data) => (
+              <div className="   h-[500px] w-96 md:w-[420px]  lg:w-[410px]  p-8  box bg-background shadow-xl shadow-slate-400 p-4 m-4 hover:bg-slate-50  transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-slate-200 duration-400 sm:w-50 ">
+                <img
+                  className="h-0 w-0  sm:h-24 sm:w-24    "
+                  src={data.image}
+                />
 
-{/* card2 */}
-      <div className="p-16 h-full w-full">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1   ">
-          
-          {
-          ProjectCardData.map((data) => (
-            <div className="box bg-background shadow-xl shadow-slate-500 p-4 m-4   transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-110  duration-400">
-              <img className="h-24 w-fit " src={data.image} />
+                <div className=" w-fit  mt-2 ">
+                  <h3 className="   text-center  text-2xl sm:text-xl text-white w-fit pr-8 md:w-fit md:pr-0  ">
+                    {data.title}
+                  </h3>
+                </div>
 
-              <div className=" h-6  mt-5">
-              <h1 className="text-white text-center text-xl font-bold font-poppins ">{data.title}</h1>
+                <div className="mt-4">
+                  <h1 className="text-white ">{data.description}</h1>
+                </div>
 
-              </div>
-
-              {console.log(data.stack)}
-
-              <div className=" h-80 ">
-                <h3 className="text-white mt-4  h-48 ">
-                    {data.description}
-                </h3>
-                {/* <h3 className=" text-xl text-center text-white w-full mt-1 ml-1 flex flex-nowrap">
-                  {data.stack.map((tech, j) => (
-                    <div className="flex ">
-                    <h1 key={j} className="flex mx-1 border p-1 text-sm w-20">{tech}</h1>
-
-                    </div>
-                  ))}
-                </h3> */}
                 <div className="flex flex-row mt-4">
-                    <button className="text-black font-bold rounded border p-1 m-1 px-2 bg-yellow-500">
-                        View Code 
+                  <a href={data.code} target="_blank">
+                    <button className="text-black font-bold rounded border p-1 m-1 px-2 bg-yellow-500 ">
+                      View Code
                     </button>
-                    <button className="text-black font-bold border rounded p-1 m-1 px-2 justify-end bg-blue-700" onClick={()=>handleViewDemoButton()}>
-                        Live Demo
-                    </button>
+                  </a>
+                  <button
+                    className="text-black font-bold border rounded p-1 m-1 px-2 justify-end bg-blue-700"
+                    onClick={() => handleViewDemoButton()}
+                  >
+                    Live Demo
+                  </button>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Fade>
       </div>
-
-
-
-
     </div>
   );
 }

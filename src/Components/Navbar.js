@@ -1,149 +1,14 @@
-// import React from "react";
-// import Profile from "../Assets/pro.png";
-// function Navbar() {
-//   return (
-//     <div className="bg-white ">
-
-//       <div className="flex flex-row  justify-start">
-//         <div className="flex ">
-//           <h1>Hi. I am Shreyash</h1>
-//         </div>
-
-//       </div>
-
-//         <div className="flex justify-end">
-//           <button>Home</button>
-
-//           <btn>Projects</btn>
-//           <btn>About Me</btn>
-
-//           <button>Contact</button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
-// import { useState } from "react";
-// import { Button } from "@material-tailwind/react";
-
-// export default function NavBar() {
-//     const [navbar, setNavbar] = useState(false);
-
-//     return (
-//         <nav className="w-full bg-purple-500 shadow">
-//             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-//                 <div>
-//                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-//                         <a href="javascript:void(0)">
-//                             <h2 className="text-2xl font-bold text-white">LOGO</h2>
-//                         </a>
-//                         <div className="md:hidden">
-//                             <button
-//                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-//                                 onClick={() => setNavbar(!navbar)}
-//                             >
-//                                 {navbar ? (
-//                                     <svg
-//                                         xmlns="http://www.w3.org/2000/svg"
-//                                         className="w-6 h-6 text-white"
-//                                         viewBox="0 0 20 20"
-//                                         fill="currentColor"
-//                                     >
-//                                         <path
-//                                             fillRule="evenodd"
-//                                             d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-//                                             clipRule="evenodd"
-//                                         />
-//                                     </svg>
-//                                 ) : (
-//                                     <svg
-//                                         xmlns="http://www.w3.org/2000/svg"
-//                                         className="w-6 h-6 text-white"
-//                                         fill="none"
-//                                         viewBox="0 0 24 24"
-//                                         stroke="currentColor"
-//                                         strokeWidth={2}
-//                                     >
-//                                         <path
-//                                             strokeLinecap="round"
-//                                             strokeLinejoin="round"
-//                                             d="M4 6h16M4 12h16M4 18h16"
-//                                         />
-//                                     </svg>
-//                                 )}
-//                             </button>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div>
-//                     <div
-//                         className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-//                             navbar ? "block" : "hidden"
-//                         }`}
-//                     >
-//                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-//                             <li className="text-white hover:text-indigo-200">
-//                                 <a href="javascript:void(0)">Home</a>
-//                             </li>
-//                             <li className="text-white hover:text-indigo-200">
-//                                 <a href="javascript:void(0)">Blog</a>
-//                             </li>
-//                             <li className="text-white hover:text-indigo-200">
-//                                 <a href="javascript:void(0)">About US</a>
-//                             </li>
-//                             <li className="text-white hover:text-indigo-200">
-//                                 <a href="javascript:void(0)">Contact US</a>
-//                             </li>
-//                         </ul>
-
-//                         <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-//                     {/* <a
-//                         href="javascript:void(0)"
-//                         className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-//                     >
-//                         Sign in
-//                     </a>
-//                     <a
-//                         href="javascript:void(0)"
-//                         className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-//                     >
-//                         Sign up
-//                     </a> */}
-//                 </div>
-//                     </div>
-//                 </div>
-
-//                 {/* <div className="hidden space-x-2 md:inline-block">
-//                     <a
-//                         href="javascript:void(0)"
-//                         className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-//                     >
-//                         Sign in
-//                     </a>
-//                     <a
-//                         href="javascript:void(0)"
-//                         className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-//                     >
-//                         Sign up
-//                     </a>
-//                 </div> */}
-//             </div>
-
-//             <Button>Button</Button>
-//         </nav>
-//     );
-// }
-
+import dw from '../Assets/download.png';
 import { useState, useEffect } from "react";
 import {
-  Navbar,
-  MobileNav,
+ 
   Typography,
-  Button,
-  IconButton,
+  
 } from "@material-tailwind/react";
+import Avatar from '@mui/material/Avatar';
+import pic from '../Assets/proPic.png'
+import resume from '../Resume/resume.pdf'
+
 
 export default function Example() {
   const [openNav, setOpenNav] = useState(false);
@@ -202,30 +67,78 @@ export default function Example() {
     </ul>
   );
 
+
+  const downloadResume=()=>{
+     
+
+            fetch('Shreyash_Resume.pdf').then(response => {
+              response.blob().then(blob => {
+                  // Creating new object of PDF file
+                  const fileURL = window.URL.createObjectURL(blob);
+                  // Setting various property values
+                  let alink = document.createElement('a');
+                  alink.href = fileURL;
+                  alink.download = 'Shreyash_Resume.pdf';
+                  alink.click();
+                }).catch((err)=>{
+                  console.log("err msg"+err)
+                })
+              })
+
+  }
+
+
+
   return (
-    <div>
-      <div className="bg-background h-12  flex justify-start p-2">
-        <button className="  sm:text-white text-sm sm:text-2xl text-black  ">
-          Portfolio
-        </button>
+    <div className="   bg-background   ">
+      <div  className="bg-background h-12 flex w-screen sm:flex sm:flex-row  sm:w-screen w-screen flex flex-row  ">
+      <div className=" mt-1 ml-4 p-2">
+        <Avatar alt="Remy Sharp" src={pic} />
 
-        <div className="   flex flex-row justify-end w-screen  md:px-36 ">
-          <button className="text-white mx-1 px-1 font-bold  md:mx-2 md:px-2 lg:mx-2 lg:px-2 sm:mx-2 sm:px-2 hover:underline">
-            Home
-          </button>
-
-          <button className="text-white   font-bold md:mx-2 md:px-2 lg:mx-2 lg:px-2 sm:mx-2 sm:px-2 hover:underline">
-            Project
-          </button>
-
-          <button className="text-white   font-bold w-24 lg:w-auto sm:w-auto md:mx-2 md:px-2 lg:mx-2 lg:px-2 sm:mx-2 sm:px-2 hover:underline">
-            About Me
-          </button>
-
-          <button className="text-white   pr-12 font-bold md:mx-2 md:px-2 lg:mx-2 lg:px-2 sm:mx-2 sm:px-2 hover:underline">
-            Contact
-          </button>
         </div>
+        <h1 className=" underline p-2 sm:px-1 sm:text-4xl text-2xl px-2 font-bold  underline p-2 text-yellow-400 font-bold ">
+            MyPortfolio
+        </h1>
+        
+
+
+        <div id="btnsContainer" className="  h-12   w-[780px] sm:w-[1050px] md:w-[1050px] lg:w-[1550px] sm:flex sm:flex-row ml-52 sm:ml-0 text-xl sm:justify-end sm:px-2  sm:w-screen  sm:absolute   flex flex-row justify-end w-fit  absolute  ">
+
+              <a href="#ProjectSection">
+                <button  className="sm:text-white  sm:mr-1 sm:mt-1 sm:mx-3  text-black hover:underline mr-2">
+                  Project
+                </button>
+                </a>
+
+                <a href="#aboutSection">
+                <button className="sm:text-white sm:mr-1 sm:mt-1 sm:mx-3 text-black mr-2 hover:underline">
+                  About
+                </button>
+                </a>
+
+                <a href="#ContactSection">
+                <button className="sm:text-white sm:mr-1 sm:mx-3 sm:mt-1 text-black mr-2 hover:underline">
+                  Contact
+                </button>
+
+                </a>
+
+                  <a href={resume} target="_blank">        
+                <div className='flex flex-row' onClick={()=>downloadResume()}>
+                <button className="sm:text-white sm:mx-3 pr-10 sm:mt-1 text-white mt-1 mr-6 hover:underline  " >
+                  MyResume 
+                </button>
+                  <img src={dw} className='absolute m-1 sm:m-1 sm:px-2  right-7 sm:pr-1 sm:pt-1 h-6 px-2'  />
+                </div>
+
+                </a>
+
+        </div>
+        {/* <div className='border sm:w-screen sm:bg-black'>
+
+        </div> */}
+
+
       </div>
     </div>
   );

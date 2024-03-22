@@ -3,6 +3,7 @@ import cpp from '../Assets/icons/cpp.png'
 import robo from "../Assets/robot.png";
 import portfolio from '../Assets/portfolio.png'
 import project from '../Assets/project.jpg'
+import youtube from '../Assets/youtube.png';
 
 
   export const ProjectCardData = [
@@ -26,22 +27,21 @@ import project from '../Assets/project.jpg'
       id: 1,
     },
     {
-      title: 'project 3 ',
-      description: " upcoming....",
-        image: project,
-        stack: ['React', 'WebRTC'],
-      source: 'https://google.com',
-      code: 'https://google.com',
-      id: 2,
+      "title": "FITGIF",
+      "description": " Fitgif web application allowing users to search workouts by body parts or exercise names and receive related GIFs using Rapid API. Utilized Tailwind CSS for styling to ensure a visually appealing and responsive user interface. Integrated Rapid API to fetch workout-related GIFs dynamically based on user search queries, enhancing user engagement and interaction. Implemented functionality to display additional data and similar YouTube videos related to selected exercises, providing users with comprehensive information and resources. Included a Health Tracker feature named BMI Calculator, enabling users to calculate their Body Mass Index (BMI) for health assessment and tracking.",
+      "image": "fitgif_image",
+      "stack": ["React", "HTML", "Tailwind CSS", "JavaScript"],
+      "demo": "https://example.com",
+      "code": "https://github.com/shreyash2628/FitGIF",
+      "id": 2
     },
     {
-      title: 'project 4',
-      description: "Upcoming...",
-      image: project,
-      stack: ['React', 'ChatEngine', 'Firebase'],
-      source: 'https://google.com',
-      code: 'https://google.com',
-      id: 3,
+      "title": "YouTube Clone",
+      "description": "YouTube clone web app allowing users to watch videos, view comments & explore shorts/reels content. Implemented features for searching videos & categorizing content. Utilized React.js, HTML, Tailwind CSS, & JavaScript for the frontend. Integrated Rapid API to fetch video content & comments dynamically. Deployed on GitHub Pages for public access.",      "image": youtube,
+      "stack": ["React.js", "HTML", "Tailwind CSS", "JavaScript"],
+      "demo": "https://shreyash2628.github.io/Youtube_Clone/",
+      "code": "https://github.com/shreyash2628/Youtube_Clone",
+      "id": 3
     },
     {
         title: 'project 5',

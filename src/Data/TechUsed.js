@@ -6,7 +6,7 @@ import tailwind from '../Assets/icons/tailwind.png'
 import typescript from '../Assets/icons/typescript.png'
 import cpp from '../Assets/icons/cpp.png'
 import mysql from '../Assets/icons/mysql.png'
-import android from '../Assets/icons/android.png'
+import android from '../Assets/icons/app-development.png'
 import java from '../Assets/icons/java.png'
 import mui from '../Assets/icons/mui.png'
 import xd from '../Assets/icons/xd.png'
@@ -68,7 +68,7 @@ export  const TechUsed = [
       image: mysql,
     },
     {
-        name: "ANDROID-DEV",
+        name: "APP DEV",
         image: android,
       },
       {

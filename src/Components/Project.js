@@ -39,14 +39,14 @@ function Project() {
         <Fade left cascade>
           <div className=" grid grid-cols-2 gap-8 lg:grid lg:grid-cols-3 lg:gap-8 md:grid md:grid-cols-3 md:gap-2 ">
             {ProjectCardData.map((data) => (
-              <div className="   h-[500px] w-96 md:w-[420px]  lg:w-[410px]  p-8  box bg-background shadow-xl shadow-slate-400 p-4 m-4 hover:bg-slate-50  transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-slate-200 duration-400 sm:w-50 ">
+              <div className="   h-[500px] w-96 md:w-[420px]  lg:w-[410px]    box bg-background shadow-xl shadow-slate-400 p-4 m-4 hover:bg-slate-50  transition ease-in-out delay-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-slate-200 duration-400 sm:w-50 ">
                 <img
-                  className="h-0 w-0  sm:h-24 sm:w-full  shadow-lg    "
+                  className="h-0 w-0 lg:h-36 sm:h-24 sm:w-full  shadow-lg    "
                   src={data.image}
                 />
 
                 <div className=" w-fit  mt-2 ">
-                  <h3 className="   text-center  text-2xl sm:text-xl text-white w-fit pr-8 md:w-fit md:pr-0  ">
+                  <h3 className="underline text-center  text-2xl sm:text-xl text-white w-fit pr-8 md:w-fit">
                     {data.title}
                   </h3>
                 </div>
